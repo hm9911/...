@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Építőipari Cég Weboldala</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {background-color: #f4f4f4; margin: 0; padding: 0; }
+  .container { width: 80%; margin: auto; padding: 20px; }
+  header { background: #333; color: #fff; padding: 20px 0; text-align: center; }
+  header h1 { margin: 0; }
+  nav { background: #555; color: #B85042; padding: 15px 0; text-align: center; }
+  nav a { color: #B85042; text-decoration: none; padding: 0 15px; }
+  nav a:hover { background: #444; }
+  .banner { background: url('./OIG2.jpeg') no-repeat center center/cover; min-height: 300px; text-align: center; color: #ffffff}
+  .banner h1 { padding-top: 20px; font-size: 2.5em; }
+  .main-content { padding: 20px; }
+  .main-content h2, .main-content p { margin-bottom: 10px; }
+  footer {color: #ffffff; text-align: center; padding: 10px 0; }
+
+
+@media (max-width: 768px) {
+  .container { width: 95%; }
+  nav a { padding: 0 10px; }
+}
+
+
+body { font-family: 'Open Sans', sans-serif; }
+
+
+header, footer { background: #B85042; }
+nav { background: #E7E8D1; }
+nav a:hover { background: #b8504246; }
+
+
+nav a { transition: background-color 0.3s; }
+
+
+button, input[type="submit"] { background: #ee9b00; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+button:hover, input[type="submit"]:hover { background: #ca6702; }
+
+
+.card { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; padding: 20px; border-radius: 10px; }
+
+
+footer p { font-size: 0.8em; }
+footer a { color: #94d2bd; }
+
+
+meta[name="description"] { content: "Építőipari cégünk a legmagasabb színvonalú építőipari szolgáltatásokat nyújtja."; }
+
+.callback-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #E7E8D1; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.callback-form h2 {
+  text-align: center;
+  color: #B85042; 
+  margin-bottom: 20px;
+}
+
+.callback-form p {
+  text-align: center;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.callback-form input[type="text"],
+.callback-form input[type="number"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.callback-form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #B85042; 
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.callback-form input[type="submit"]:hover {
+  background-color: #ca6702; 
+}
+
+.img-comp-container {
+  position: relative;
+  height: 500px; 
+  margin: 20px;
+  margin-left:37%
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .responsive { width: 250px; }
+  .responsive { height: 250px; }
+  .img-comp-container { margin-left: 15%;}
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Építőipari Cég Neve</h1>
+  </header>
+  <nav>
+    <a href="Index.html"><b>Kezdőlap</b></a>
+    <a href="Rolunk.html"><b>Rólunk</b></a>
+    <a href="Szolgaltatasok.html"><b>Szolgáltatások</b></a>
+    <a href="Referenciak.html"><b>Referenciák</b></a>
+    <a href="Kapcsolat.html"><b>Kapcsolat</b></a>
+  </nav>
+  <div class="banner">  </div>
+    
+ 
+  <div class="container main-content">
+    <h2>Bemutatkozás</h2>
+    <p>Üdvözöljük az Építőipari Cégünk weboldalán, ahol megtalálja a legmagasabb színvonalú építőipari szolgáltatásokat.</p>
+   
+  </div>
+  
+  <div class="callback-form">
+    <h2>Kérjen Visszahívást!</h2>
+    <p>A lehető leghamarabb felvesszük Önnel a kapcsolatot!</p>
+    <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-left">
+      <input type="hidden" name="access_key" value="b429b8e5-2289-4afa-82f1-112fd59ccf23">
+      <input type="text" name="Teljes Név" placeholder="Teljes név" required>
+      <input type="number" name="Telefonszám" placeholder="Telefonszám" required>
+      <input type="hidden" name="from_name" value="Megkeresés">
+        <input type="hidden" name="subject" value="Új megkeresés érkezett">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <input type="hidden" name="redirect" value="https://hm9911.github.io/html/">
+      <input type="submit" value="Küldés">
+    </form>
+  </div>
+
+  <div class="img-comp-container">
+    <div class="img-comp-img">
+      <img src="Utana.jpg" width="500" height="500" class="responsive">
+    </div>
+    <div class="img-comp-img img-comp-overlay">
+      <img src="elotte.jpg" width="500" height="500" class="responsive">
+    </div>
+  </div>
+
+<script>
+  function initComparisons() {
+var x, i;
+
+x = document.getElementsByClassName("img-comp-overlay");
+for (i = 0; i < x.length; i++) {
+
+compareImages(x[i]);
+}
+function compareImages(img) {
+var slider, img, clicked = 0, w, h;
+
+w = img.offsetWidth;
+h = img.offsetHeight;
+
+img.style.width = (w / 2) + "px";
+
+slider = document.createElement("DIV");
+slider.setAttribute("class", "img-comp-slider");
+
+img.parentElement.insertBefore(slider, img);
+
+slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+
+slider.addEventListener("mousedown", slideReady);
+
+window.addEventListener("mouseup", slideFinish);
+
+slider.addEventListener("touchstart", slideReady);
+
+window.addEventListener("touchend", slideFinish);
+function slideReady(e) {
+  
+  e.preventDefault();
+  
+  clicked = 1;
+  
+  window.addEventListener("mousemove", slideMove);
+  window.addEventListener("touchmove", slideMove);
+}
+function slideFinish() {
+  
+  clicked = 0;
+}
+function slideMove(e) {
+  var pos;
+  
+  if (clicked == 0) return false;
+  
+  pos = getCursorPos(e)
+  
+  if (pos < 0) pos = 0;
+  if (pos > w) pos = w;
+  
+  slide(pos);
+}
+function getCursorPos(e) {
+  var a, x = 0;
+  e = (e.changedTouches) ? e.changedTouches[0] : e;
+  
+  a = img.getBoundingClientRect();
+  
+  x = e.pageX - a.left;
+  
+  x = x - window.pageXOffset;
+  return x;
+}
+function slide(x) {
+ 
+  img.style.width = x + "px";
+  
+  slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+}
+}
+}
+initComparisons();
+</script>
+  
+
+
+
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 [Cég Neve]. Minden jog fenntartva.</p>
+      <p>Email: info@[cegneve].hu | Telefon: +36 xx xxx xxxx</p>
+    </div>
+  </footer>
+
+</body>
+</html>
